@@ -1,0 +1,6 @@
+kubectl get pods -n practica2-201549059
+kubectl get svc -n practica2-201549059
+
+kubectl logs -f grpc-deployment-fd7764c67-vxd2g grpc-client-api -n practica2-201549059
+kubectl logs -f grpc-deployment-fd7764c67-vxd2g grpc-server -n practica2-201549059
+kubectl logs -f kafka-consumer-86df787b8c-9mxhq -n practica2-201549059

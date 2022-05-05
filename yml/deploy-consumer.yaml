@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka-consumer
+  namespace: practica2-201549059
+  labels:
+    app: kafka-consumer
+spec:
+  selector:
+    matchLabels:
+      app: kafka-consumer
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: kafka-consumer
+    spec:
+      hostname: kafka-consumer
+      containers:
+        - name: consumer-games
+          image: davidlux123/consumer-kafka
+          env:
+          - name: KAFKA_HOST
+            value: my-cluster-kafka-bootstrap.kafka
+          - name: KAFKA_PORT
+            value: '9092'
+          - name: MONGO_URI
+            value: root:password@34.72.123.155:27017

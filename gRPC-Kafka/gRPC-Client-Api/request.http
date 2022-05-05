@@ -1,0 +1,8 @@
+### post
+POST http://35.184.106.44:3000/Jugar
+Content-Type: application/json
+
+{
+    "game_id" : 2,
+    "players" : 5
+}
